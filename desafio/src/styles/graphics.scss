@@ -1,0 +1,119 @@
+.content-graphic {
+    height: 65vh;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+  
+
+    .legends {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        width: 90%;
+        margin: auto;
+
+        p {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            margin-top: 5px;
+            padding: 15px;
+            gap: 15px;
+
+            background-color: #cbd363;
+            border-radius: 40px;
+
+            div {
+                background-color: var(--azul-ciano);
+                border-radius: 20px;
+                padding: 5px;
+                color: white;
+                font-weight: 500;
+            }
+
+          
+        }
+    }
+}
+
+.bar-variables {
+    width: 60%;
+    min-width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: var(--azul-ciano);
+        transition: background 0.2s;
+        border-radius: 50px;
+        &:hover {
+            background-color: var(--verde-claro);
+        }
+
+        img {
+            width: 50px;
+            border-radius: 0;
+            margin: auto;
+
+            background-color: transparent;
+        }
+
+        & .tooltiptext {
+            visibility:hidden;
+            width: 120px;
+            border-radius: 5px;
+            background-color: #555;
+            color: #fff;
+            position: absolute;
+            opacity: 0;
+            bottom: -20px;
+            
+            z-index: 3;
+            transition: opacity 0.5s;
+        }
+
+        .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color:  transparent  transparent #555 transparent;
+        }
+
+        &:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    img {
+        width: 50px;
+        border-radius: 50px;
+        padding: 8px;
+        object-fit: cover;
+        background-color: var(--azul-ciano);
+        transition: background 0.2s;
+        &:hover {
+            background-color: var(--verde-claro);
+        }
+    }
+
+    .point {
+        width: 15px;
+        height: 15px;
+        background-color: var(--verde-claro);
+        border-radius: 50%;
+    }
+}
